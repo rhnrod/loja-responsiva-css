@@ -1,0 +1,270 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular);
+@import url(https://fonts.googleapis.com/css?family=Silkscreen:regular,700);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container img {
+    max-width: 360px;
+}
+
+header {
+    background-color: #35d48a;
+    color: #fff;
+}
+h1 {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 3em;
+    color: #fff;
+}
+
+ul {
+    display: flex;
+}
+
+ul li {
+    font-family: 'Silkscreen', sans-serif;
+    list-style: none;
+    margin-left: 16px;
+    font-size: 1.25em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul li a:hover {
+    transition: 0.5s all ease;
+    color: black
+}
+
+#hamburger-menu {
+    display: none;
+    flex-direction: column;
+    max-width: 280px;
+    width: 100%;
+    background-color: #228658;
+    text-align: center;
+    margin: 0;
+}
+
+nav#hamburger-menu {
+    padding: 8px 0;
+}
+
+#hamburger-menu ul {
+    margin: 0;
+}
+
+#hamburger-menu ul li {
+    width: 100%;
+    margin: 0 auto;
+    align-self: center;
+}
+
+
+#hamburger-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-toggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;     
+    background: #fff;
+}
+
+#sobre-loja {
+    display: flex;
+}
+
+.container-text {
+    margin-left: 56px;
+}
+
+.container-text h2,
+.container h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.75em;
+    color: #35d48a;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: #35d48a solid 3px;
+}
+
+.container-text p {
+    padding-top: 16px;
+    text-align: justify;
+}
+
+.container-produtos {
+    display: block;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+.produtos {
+    margin-top: 16px;
+    padding-top: 16px;
+}
+
+.produto {
+    text-align: justify;
+}
+
+.produto img {
+    max-width: 100%;
+    min-width: 100%;
+    object-fit: scale-down;
+    cursor: pointer;
+    max-height: 245px;
+}
+
+.produto h3,
+.produto p {
+    margin: 8px 0;
+}
+
+.produto button {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #228658;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.produto button:hover {
+    background-color: #2ec27d;
+
+}
+
+@media screen and (max-width: 640px) {
+    .produtos {
+        display: block;
+    }
+
+    .produto {
+        margin-bottom: 58px;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .container img {
+        max-width: 90%;
+    }
+
+    .container-text {
+        margin-left: 0;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2em;
+        max-width: 70%;
+    }
+    
+    nav {
+        width: 200px;
+    }
+
+    ul {
+        display: block;
+    }
+
+    header ul li {
+        text-align: center;
+        font-size: 1.1em;
+        margin-left: 0;
+    }
+
+    .container:first {
+        display: block;
+    }
+
+    #sobre-loja {
+        display: block;
+    }
+
+    #sobre-loja img {
+        display: block;
+        margin: 0 auto 32px auto;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container {
+        width: 90%;
+    }
+
+    #sobre-loja {
+        display: block;
+    }
+
+    #sobre-loja img {
+        display: block;
+        max-width: fit-content;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .container-text {
+        margin-left: 0;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 1%;
+        row-gap: 5%;
+        margin-bottom: 56px;
+    }
+
+    .produto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .produto button {
+        margin-top: auto;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #hamburger-toggle {
+        display: block;
+    }
+
+    #menu {
+        display: none;
+    }
+}
